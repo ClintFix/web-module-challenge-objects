@@ -163,9 +163,18 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, desiredRating) {
+  const filteredReviews = [];  
+  for(let i = 0; i < array.length; i++) {
+    if (array[i]["rating"] >= desiredRating && array[i]["rating"] < desiredRating +1) {
+      filteredReviews.push(array[i]);
+    }
   }
+  return filteredReviews;
+ }
+
+ console.log("STRETCH 1");
+ console.log(getReviewByRating(reviews, 4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
