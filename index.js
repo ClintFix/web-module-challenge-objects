@@ -220,10 +220,25 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(originalMiles) {
+  const newCar = {
+    odometer: originalMiles,
+    drive: function(newMiles) {
+      this.odometer += newMiles;
+      return this.odometer;
+    }
+  }
+  return newCar;
 }
+
+  const car1 = carMaker(10);
+  car1.drive(300);
+
+  console.log("STRETCH 3");
+  console.log(car1);
+    
+
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
